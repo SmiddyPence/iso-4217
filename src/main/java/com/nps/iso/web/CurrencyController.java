@@ -1,13 +1,18 @@
 package com.nps.iso.web;
 
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
+import com.nps.iso.domain.Currency;
+import com.nps.iso.repository.CurrencyRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
-@EnableAutoConfiguration
 public class CurrencyController {
+
+    @Autowired
+    CurrencyRepository currencyRepository;
 
     @RequestMapping("/")
     @ResponseBody
@@ -15,12 +20,16 @@ public class CurrencyController {
         return "Hello World!";
     }
 
-    public static void main(String[] args) throws Exception {
-        String webPort = System.getenv("PORT");
-        if (webPort == null || webPort.isEmpty()) {
-            webPort = "8080";
-        }
-        System.setProperty("server.port", webPort);
-        SpringApplication.run(CurrencyController.class, args);
+    @RequestMapping("/currency/all")
+    @ResponseBody
+    List<Currency> all(){
+        List<Currency> currencies = currencyRepository.findAll();
+        return currencies;
+    }
+
+    @RequestMapping("/currency/{alphabeticCode}")
+    @ResponseBody
+    Currency all(@PathVariable("alphabeticCode") String alphabeticCode){
+        return currencyRepository.findByAlphabeticCode(alphabeticCode);
     }
 }
