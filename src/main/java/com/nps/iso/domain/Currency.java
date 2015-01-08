@@ -1,7 +1,6 @@
 package com.nps.iso.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -10,7 +9,7 @@ import java.util.Collection;
 public class Currency {
 
     @Column(nullable = false)
-    private String currency;
+    private String name;
 
     @Id
     @Column
@@ -22,18 +21,18 @@ public class Currency {
     @Column
     private String minorUnit;
 
-    @OneToMany(mappedBy = "currency")
+    @OneToMany(mappedBy = "currency", fetch = FetchType.EAGER)
     @JsonManagedReference("currency")
     private Collection<Entity> entities;
 
     protected Currency() { }
 
-    public String getCurrency() {
-        return currency;
+    public String getName() {
+        return name;
     }
 
-    public void setCurrency(String currency) {
-        this.currency = currency;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAlphabeticCode() {

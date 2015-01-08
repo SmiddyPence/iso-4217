@@ -11,7 +11,6 @@ import org.springframework.context.annotation.ComponentScan;
 @EntityScan(basePackageClasses=Currency.class)
 public class Application {
 
-
     public static void main(String[] args) throws Exception {
         String webPort = System.getenv("PORT");
         if (webPort == null || webPort.isEmpty()) {

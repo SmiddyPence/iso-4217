@@ -2,6 +2,7 @@ package com.nps.iso.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+
 import javax.persistence.*;
 
 @javax.persistence.Entity
@@ -9,7 +10,7 @@ public class Entity {
 
     @Id
     @Column
-    private String entity;
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "alphabetic_code")
@@ -24,11 +25,11 @@ public class Entity {
         this.currency = currency;
     }
 
-    public String getEntity() {
-        return entity;
+    public String getName() {
+        return name;
     }
 
-    public void setEntity(String entity) {
-        this.entity = entity;
+    public void setName(String name) {
+        this.name = name;
     }
 }

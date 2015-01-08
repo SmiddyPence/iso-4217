@@ -1,18 +1,19 @@
 package com.nps.iso.web;
 
 import com.nps.iso.domain.Currency;
-import com.nps.iso.repository.CurrencyRepository;
+import com.nps.iso.service.CurrencyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 
 @Controller
 public class CurrencyController {
 
     @Autowired
-    CurrencyRepository currencyRepository;
+    CurrencyService currencyService;
 
     @RequestMapping("/")
     @ResponseBody
@@ -22,14 +23,14 @@ public class CurrencyController {
 
     @RequestMapping("/currency/list")
     @ResponseBody
-    List<Currency> all(){
-        List<Currency> currencies = currencyRepository.findAll();
+    Collection<Currency> all(){
+        Collection<Currency> currencies = currencyService.findAll();
         return currencies;
     }
 
     @RequestMapping("/currency/get/{alphabeticCode}")
     @ResponseBody
-    Currency all(@PathVariable("alphabeticCode") String alphabeticCode){
-        return currencyRepository.findByAlphabeticCode(alphabeticCode);
+    Currency get(@PathVariable("alphabeticCode") String alphabeticCode){
+        return currencyService.findByAlphabeticCode(alphabeticCode);
     }
 }

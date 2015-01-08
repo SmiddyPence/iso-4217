@@ -1,5 +1,5 @@
 CREATE TABLE currency (
-  currency varchar(128) NOT NULL,
+  name varchar(128) NOT NULL,
   alphabetic_code varchar(3) DEFAULT NULL,
   numeric_code varchar(3) DEFAULT NULL,
   minor_unit varchar(4) DEFAULT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE currency (
 ); 
 
 CREATE TABLE entity (
-  entity VARCHAR(64) NOT NULL,
+  name VARCHAR(64) NOT NULL,
   alphabetic_code VARCHAR(3),
   FOREIGN KEY (alphabetic_code) REFERENCES currency(alphabetic_code)
 );
