@@ -20,14 +20,14 @@ public class CurrencyController {
         return "Hello World!";
     }
 
-    @RequestMapping("/currency/all")
+    @RequestMapping("/currency/list")
     @ResponseBody
     List<Currency> all(){
         List<Currency> currencies = currencyRepository.findAll();
         return currencies;
     }
 
-    @RequestMapping("/currency/{alphabeticCode}")
+    @RequestMapping("/currency/get/{alphabeticCode}")
     @ResponseBody
     Currency all(@PathVariable("alphabeticCode") String alphabeticCode){
         return currencyRepository.findByAlphabeticCode(alphabeticCode);
