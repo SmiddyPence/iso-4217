@@ -12,6 +12,10 @@ import org.springframework.context.annotation.ComponentScan;
 public class Application {
 
     public static void main(String[] args) throws Exception {
+        String url = System.getenv("SPRING_DATASOURCE_URL");
+        String username = System.getenv("SPRING_DATASOURCE_USERNAME");
+        String password = System.getenv("SPRING_DATASOURCE_PASSWORD");
+        System.out.println(url+"|"+username+"|"+password);
         SpringApplication.run(Application.class, args);
     }
 }
