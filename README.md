@@ -17,7 +17,7 @@ select * from entity;
 ### Set Enviroment Variables
 
 ```sh
-SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/iso_4217
+SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/iso_4217?reconnect=true
 SPRING_DATASOURCE_USERNAME=root
 SPRING_DATASOURCE_PASSWORD=password
 ```
