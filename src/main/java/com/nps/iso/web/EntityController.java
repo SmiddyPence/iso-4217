@@ -7,23 +7,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("entity")
 public class EntityController {
 
     @Autowired
     EntityRepository entityRepository;
 
-    @RequestMapping("/entity/list")
-    @ResponseBody
+    @RequestMapping("/list")
     List<Entity> all(){
         return entityRepository.findAll();
     }
 
-    @RequestMapping("/entity/get/{name}")
-    @ResponseBody
+    @RequestMapping("/get/{name}")
     Entity get(@PathVariable("name") String name){
         return entityRepository.findByName(name);
     }
