@@ -22,7 +22,7 @@ public class Currency {
     private String minorUnit;
 
     @OneToMany(mappedBy = "currency", fetch = FetchType.EAGER)
-    @JsonManagedReference("currency")
+    @JsonIgnore
     private Collection<Entity> entities;
 
     protected Currency() { }

@@ -3,7 +3,7 @@
 Simple service to return the set of ISO standard currencies
 
 
-### Set up database
+### Create database
 
 ```sh
 create database iso_4217;
@@ -15,3 +15,9 @@ select * from entity;
 ```
 
 ### Set Enviroment Variables
+
+```sh
+SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/iso_4217
+SPRING_DATASOURCE_USERNAME=root
+SPRING_DATASOURCE_PASSWORD=password
+```

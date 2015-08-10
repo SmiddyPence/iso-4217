@@ -12,9 +12,8 @@ public class Entity {
     @Column
     private String name;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "alphabetic_code")
-    @JsonBackReference("currency")
     private Currency currency;
 
     public Currency getCurrency() {
