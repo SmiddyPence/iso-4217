@@ -12,7 +12,7 @@ public class Entity {
     @Column
     private String name;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "alphabetic_code")
     private Currency currency;
 
