@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class CahcedCurrencyService implements CurrencyService {
+public class CachedCurrencyService implements CurrencyService {
 
     static final Map<String, Currency> CACHE = new HashMap<>();
 

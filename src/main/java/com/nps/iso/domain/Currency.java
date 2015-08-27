@@ -21,7 +21,7 @@ public class Currency {
     @Column
     private String minorUnit;
 
-    @OneToMany(mappedBy = "currency")
+    @OneToMany(mappedBy = "currency", fetch = FetchType.EAGER)
     @JsonIgnore
     private Collection<Entity> entities;
 
