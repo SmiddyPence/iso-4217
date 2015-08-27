@@ -1,8 +1,5 @@
 package com.nps.iso.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
-
 import javax.persistence.*;
 
 @javax.persistence.Entity
