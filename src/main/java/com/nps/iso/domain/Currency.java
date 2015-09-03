@@ -21,10 +21,6 @@ public class Currency {
     @Column
     private String minorUnit;
 
-    @OneToMany(mappedBy = "currency", fetch = FetchType.EAGER)
-    @JsonIgnore
-    private Collection<Entity> entities;
-
     protected Currency() { }
 
     public String getName() {
@@ -59,11 +55,4 @@ public class Currency {
         this.minorUnit = minorUnit;
     }
 
-    public Collection<Entity> getEntities() {
-        return entities;
-    }
-
-    public void setEntities(Collection<Entity> entities) {
-        this.entities = entities;
-    }
 }
