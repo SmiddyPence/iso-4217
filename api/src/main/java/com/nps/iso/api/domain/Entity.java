@@ -1,4 +1,4 @@
-package com.nps.iso.domain;
+package com.nps.iso.api.domain;
 
 import javax.persistence.*;
 

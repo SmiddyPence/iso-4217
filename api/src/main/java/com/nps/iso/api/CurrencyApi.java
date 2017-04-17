@@ -1,6 +1,6 @@
-package com.nps.iso.web.api;
+package com.nps.iso.api;
 
-import com.nps.iso.domain.Currency;
+import com.nps.iso.api.domain.Currency;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Collection;

@@ -1,9 +1,7 @@
-package com.nps.iso.domain;
+package com.nps.iso.api.domain;
 
-import com.fasterxml.jackson.annotation.*;
-
-import javax.persistence.*;
-import java.util.Collection;
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 @javax.persistence.Entity
 public class Currency {

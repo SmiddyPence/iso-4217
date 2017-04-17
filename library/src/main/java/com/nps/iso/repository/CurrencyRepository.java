@@ -1,9 +1,7 @@
 package com.nps.iso.repository;
 
 
-import com.nps.iso.domain.Currency;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import com.nps.iso.api.domain.Currency;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;
