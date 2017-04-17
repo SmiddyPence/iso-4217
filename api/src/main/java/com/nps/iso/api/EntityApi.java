@@ -1,22 +1,20 @@
 package com.nps.iso.api;
 
 
-import com.nps.iso.api.domain.Entity;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
-import java.util.List;
+import javax.ws.rs.core.Response;
 
 @Path("/entity")
 public interface EntityApi {
 
     @GET
     @Path("/list")
-    List<Entity> list();
+    Response list();
 
     @GET
     @Path("/get/{name}")
-    Entity get(@PathParam("name") String name);
+    Response get(@PathParam("name") String name);
 
 }

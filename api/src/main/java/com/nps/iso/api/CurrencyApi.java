@@ -1,13 +1,18 @@
 package com.nps.iso.api;
 
-import com.nps.iso.api.domain.Currency;
-import org.springframework.web.bind.annotation.PathVariable;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.core.Response;
 
-import java.util.Collection;
-
+@Path("/currency")
 public interface CurrencyApi {
 
-    Collection<Currency> list();
+    @GET
+    @Path("/list")
+    Response list();
 
-    Currency get(@PathVariable("alphabeticCode") String alphabeticCode);
+    @GET
+    @Path("/get/{code}")
+    Response get(@PathParam("code") String code);
 }

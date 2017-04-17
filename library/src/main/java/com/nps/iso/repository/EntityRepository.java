@@ -1,6 +1,6 @@
 package com.nps.iso.repository;
 
-import com.nps.iso.api.domain.Entity;
+import com.nps.iso.domain.Entity;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;
