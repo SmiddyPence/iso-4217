@@ -3,6 +3,7 @@ target
 tmp
 .history
 dist
+.DS_Store
 *.iml
 /.idea
 /out
