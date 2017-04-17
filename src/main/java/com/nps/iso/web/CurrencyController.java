@@ -15,7 +15,7 @@ public class CurrencyController {
     CurrencyRepository currencyRepository;
 
     @RequestMapping("/list")
-    Collection<Currency> all(){
+    Collection<Currency> list(){
         Collection<Currency> currencies = currencyRepository.findAll();
         return currencies;
     }

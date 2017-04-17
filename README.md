@@ -3,15 +3,11 @@
 Simple service to return the set of ISO standard currencies
 
 
-### Create database
+### Database
 
 ```sh
-create database iso_4217;
-use iso_4217;
-source <enter path>\iso-4217\data\ddl.sql;
-show tables;
-source <enter path>\iso-4217\data\dml.sql;
-select * from entity;
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+createdb iso_4217
 ```
 
 ### Set Enviroment Variables
