@@ -2,9 +2,7 @@
 
 Simple service to return the set of ISO standard currencies
 
-![build status](https://github.co/SmiddyPence/iso-4217/actions/workflows/maven-package.yml/badge.svg?branch=master)
-![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=feature-1)
-[![Build Status](https://github.com/javaparser/javaparser/actions/workflows/maven_tests.yml/badge.svg?branch=master)](https://github.com/javaparser/javaparser/actions/workflows/maven_tests.yml)
+![build status](https://github.com/SmiddyPence/iso-4217/actions/workflows/maven-package.yml/badge.svg?branch=master)
 
 ### Database
 
